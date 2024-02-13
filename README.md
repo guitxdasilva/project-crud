@@ -42,6 +42,7 @@ Aplicação desenvolvida para realização do desafio técnico.
   <summary><strong>👉 Passo 1:</strong></summary>
 
   - Clone o repositório:
+    ```git clone https://github.com/guitxdasilva/project-crud.git```
   - Na pasta Back-end no seu terminal, instale as dependências:
    ```npm install```
   - Na pasta Front-end no seu terminal, instale as dependências:
@@ -77,7 +78,7 @@ Aplicação desenvolvida para realização do desafio técnico.
   <br>
   <summary><strong>👉 Front-end:</strong></summary>
 
-  - Na pasta Front-end no seu terminal, execute o comando:
+  - Na pasta Front-end em um novo terminal, execute o comando:
    ```npm start```
   
   O comando abrirá uma aba no seu navegador exibindo a aplicação. O Back-end deverá estar executando corretamente
