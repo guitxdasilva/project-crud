@@ -1,7 +1,6 @@
 # Boas-vindas ao repositório do desafio técnico
 https://github.com/guitxdasilva/project-crud/assets/81404321/b9d221dc-b4f5-4d16-8853-bd7c372c198e
 
-<br>
 Aplicação desenvolvida para realização do desafio técnico.
 
 # Sobre o projeto
@@ -9,16 +8,17 @@ Aplicação desenvolvida para realização do desafio técnico.
 <details>
   <summary><strong>👨‍💻  O que foi desenvolvido</strong></summary>
 
-  Consiste em uma aplicação Front-end renderizando uma tabela de usuários que utiliza o método CRUD enviando e coletando dados do Back-end.
+  Consiste em uma aplicação Front-end renderizando uma tabela de usuários que utiliza o método CRUD, enviando e coletando dados do Back-end.
 
   <br>
   <summary><strong>👉 Quais as funcionalidades:</strong></summary>
   
-  - Filtrar os usuários por nome;
   - Registrar novos usuários;
   - Atualizar os dados do usuário;
   - Deletar o usuário;
-  - Listar os usuários cadastrados.
+  - Listar os usuários cadastrados;
+  - Filtrar os usuários por nome;
+  - Paginação a cada 10 usuários cadastrados.
 
   <br>
 
@@ -38,7 +38,7 @@ Aplicação desenvolvida para realização do desafio técnico.
 # Instruções de instalação
 
 <details>
-  <summary><strong>👨‍💻 Saiba mais:</strong></summary>
+  <summary><strong>👨‍💻 Saiba mais</strong></summary>
   <summary><strong>👉 Passo 1:</strong></summary>
 
   - Clone o repositório:
@@ -65,7 +65,7 @@ Aplicação desenvolvida para realização do desafio técnico.
 # Executando a aplicação
 
 <details>
-  <summary><strong>👨‍💻 Saiba mais:</strong></summary>
+  <summary><strong>👨‍💻 Saiba mais</strong></summary>
   <summary><strong>👉 Back-end:</strong></summary>
 
   - Na pasta Back-end no seu terminal, execute o comando:
