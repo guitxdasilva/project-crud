@@ -56,7 +56,7 @@ export default function Update() {
   };
 
   return (
-    <div className="header">
+    <div>
       <h1>Editar usuário cadastrado</h1>
 
       <form onSubmit={handleSubmit}>
@@ -93,12 +93,22 @@ export default function Update() {
             required
           />
         </label>
-        <button type="button" onClick={() => navigate("/")}>
-          Cancelar
-        </button>
-        <button type="submit" disabled={!isSubmitEnabled()}>
-          Atualizar
-        </button>
+        <div className="button-register">
+          <button
+            className="cancel"
+            type="button"
+            onClick={() => navigate("/")}
+          >
+            Cancelar
+          </button>
+          <button
+            className="confirm"
+            type="submit"
+            disabled={!isSubmitEnabled()}
+          >
+            Atualizar
+          </button>
+        </div>
       </form>
     </div>
   );

@@ -58,12 +58,7 @@ Aplicação desenvolvida para realização do desafio técnico.
   A aplicação Front-end rodará na porta 3000;
 
   - <strong>Certifique-se de que estas portas não estejam em uso para que não haja conflito.</strong>
-
-  <br>
-
-  <summary><strong>👉 Passo 3, conecte com o MYSQL Workbench:</strong></summary>
-
-  <br>
+  - <strong>Certifique-se, também, que esteja conectado no MYSQL Server como localhost:3306, com usuário root e senha 12345.</strong>
 </details>
 
 # Executando a aplicação

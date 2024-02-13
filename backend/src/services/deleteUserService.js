@@ -4,9 +4,10 @@ const initConnection = require("../api/connection");
 function deleteUserService(user) {
   const connection = initConnection();
 
+  console.log('service:', user);
   return new Promise((resolve, reject) => {
     const deleteUser = `
-      DELETE FROM PROJECT.users WHERE LOWER(name) LIKE LOWER(?);`;
+      DELETE FROM PROJECT.users WHERE id = ?`;
 
     connection.query(deleteUser, [user], (err, results) => {
       if (err) {

@@ -35,7 +35,7 @@ export default function Register() {
   };
 
   return (
-    <div className="header">
+    <div>
       <h1>Cadastrar novo usuário</h1>
       <form action="submit" method="post">
         <label htmlFor="name">
@@ -71,16 +71,24 @@ export default function Register() {
             onChange={({ target }) => setOccupation(target.value)}
           />
         </label>
-        <button type="button" onClick={() => navigate("/")}>
-          Cancelar
-        </button>
-        <button
-          type="button"
-          onClick={() => validateRegister()}
-          disabled={!isSubmitEnabled()}
-        >
-          Cadastrar
-        </button>
+        <div className="button-register">
+          <button
+            className="cancel"
+            id="register"
+            type="button"
+            onClick={() => navigate("/")}
+          >
+            Cancelar
+          </button>
+          <button
+            className="confirm"
+            type="button"
+            onClick={() => validateRegister()}
+            disabled={!isSubmitEnabled()}
+          >
+            Cadastrar
+          </button>
+        </div>
       </form>
     </div>
   );

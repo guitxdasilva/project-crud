@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 export default function UsersList() {
   const navigate = useNavigate();
   const [usersPerPage] = useState(10);
-  const {
+    const {
     users,
     setUsers,
     currentPage,
@@ -46,7 +46,7 @@ export default function UsersList() {
   const deleteModal = (user) => {
     setShowDeleteConfirmation(true);
     setUserToDelete(() => {
-      return user.name;
+      return user;
     });
   };
 
@@ -60,6 +60,7 @@ export default function UsersList() {
   const confirmDelete = async () => {
     await api.deleteUser(userToDelete);
     alert("Usuário deletado com sucesso!");
+
     hideDeleteModal();
     window.location.reload();
   };
@@ -67,7 +68,7 @@ export default function UsersList() {
   return (
     <div>
       <div>
-        <table>
+        <table className="table">
           <thead>
             <tr>
               <th>Nome</th>
@@ -76,21 +77,23 @@ export default function UsersList() {
               <th>Ações</th>
             </tr>
           </thead>
+          <tbody>
           {users.length > 0 ? (
             currentUsers.map((user) => (
-              <tbody key={user.name}>
                 <tr>
                   <td>{user.name}</td>
                   <td>{user.age}</td>
                   <td>{user.occupation}</td>
                   <td>
-                    <button type="button" onClick={() => updateUser(user)}>
+                    <button
+                      className="confirm"
+                      type="button"
+                      onClick={() => updateUser(user)}
+                    >
                       Atualizar
                     </button>
-                  </td>
-                  <td>
                     <button
-                      id="button-delete"
+                      className="cancel"
                       value={user}
                       onClick={() => deleteModal(user)}
                     >
@@ -98,20 +101,20 @@ export default function UsersList() {
                     </button>
                   </td>
                 </tr>
-              </tbody>
             ))
           ) : (
             <h3>Nenhum usuário encontrado</h3>
           )}
+          </tbody>
         </table>
       </div>
       <div>
         {showDeleteConfirmation && (
           <div className="modal">
             <div className="modal-content">
-              <p>Deseja realmente excluir o usuário {userToDelete}?</p>
-              <button onClick={confirmDelete}>Sim</button>
-              <button onClick={hideDeleteModal}>Não</button>
+              <p>Deseja realmente excluir o usuário?</p>
+              <button className="confirm" onClick={confirmDelete}>Sim</button>
+              <button className="cancel" onClick={hideDeleteModal}>Não</button>
             </div>
           </div>
         )}

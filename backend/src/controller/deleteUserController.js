@@ -2,9 +2,10 @@ const deleteUserService = require("../services/deleteUserService");
 
 //Recebe os dados do front e envia para o Service para deletar o usuário
 const deleteUserController = (req, res) => {
-  const { username } = req.headers;
+  const { userid } = req.headers;
+  console.log('controller:', userid);
 
-  deleteUserService(username)
+  deleteUserService(userid)
     .then((result) => {
       console.log(result);
       return res.status(200).json(result);

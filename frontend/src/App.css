@@ -1,38 +1,215 @@
-.App {
+.header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  width: 800px;
+  border-bottom: 2px dashed black;
+  
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  margin-top: 50px;
+  width: 50%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+h1 {
+  display: flex;
+}
+
+h2, p, a {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: bold;
+}
+
+#addUser {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #1d5e69;
+  border: none;
+  color: #FFFFFF;
   text-align: center;
+  font-size: 15px;
+  padding: 10px;
+  width: 110px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#addUser span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#addUser span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#addUser:hover span {
+  padding-right: 12px;
+}
+
+#addUser:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+#name-search {
+  width: 350px;
+  height: 40px;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.button-search {
+  width: 100px;
+  height: 35px;
+  border-radius: 5px;
+}
+
+.button-search:hover {
+  background-color: #7cbc9a;
+  color: black;
+  font-weight: bold;
+}
+
+.button-register {
+  text-align: center;
+  margin-top: 15px;
+}
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=number] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 5px;
+  text-align: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 15px;
+}
+
+th {
+  font-size: 23px;
+}
+
+.table {
+  width: 100%;
+  margin-top: 30px;
+  border-collapse: collapse;
+}
+
+.table thead tr{
+  background-color: rgb(151, 150, 150);;
+}
+
+.table th, .table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.table tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: rgb(209, 209, 209);
+}
+
+table {
+  border-collapse: collapse;
+  width: 780px;
+  overflow-x: auto;
+  margin-top: 12px;
+}
+
+footer {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 20px;
+  width: 800px;
 }
 
-.App-link {
-  color: #61dafb;
+button {
+  border-radius: 5px;
+  margin: 2px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button-footer {
+  margin: 3px;
+  width: 40px;
+  height: 40px;
+  border-radius: 15px;
+}
+
+.button-footer:hover {
+  background-color: #7cbc9a;
+  color: aliceblue;
+  font-weight: bold;
+}
+
+.cancel {
+  width: 100px;
+  transition-duration: 0.4s;
+  background-color: #fa3419;
+  color: aliceblue; 
+}
+
+.confirm {
+  width: 100px;
+  transition-duration: 0.4s;
+  background-color: #23998e;
+  color: aliceblue;
+}
+
+.cancel:hover {
+  background-color: white;
+  color: black;
+}
+
+.confirm:hover {
+  background-color: white;
+  color: black;
 }

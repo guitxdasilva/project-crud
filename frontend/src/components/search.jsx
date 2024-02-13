@@ -16,8 +16,8 @@ export default function Search() {
   };
 
   return (
-    <div className="header">
-      <h1>Busca por usuário</h1>
+    <div>
+      <h1>Lista de Usuários</h1>
       <input
         id="name-search"
         type="search"

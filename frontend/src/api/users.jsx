@@ -44,7 +44,7 @@ const deleteUser = async (user) => {
   try {
     const response = await API.delete("/delete", {
       headers: {
-        userName: user,
+        userid: user.id,
       },
     });
     return response;
